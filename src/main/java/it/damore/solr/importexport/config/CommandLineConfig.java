@@ -60,9 +60,6 @@ public class CommandLineConfig {
   
   private ActionType actionType;
   private String solrUrl;
-  private String user;
-  private String password;
-  private Boolean hasCredentials;
   private String fileName;
   private Boolean deleteAll;
   private Boolean disableCursors;
@@ -258,30 +255,6 @@ public class CommandLineConfig {
     this.disableCursors = disableCursors;
   }
 
-  public Boolean hasCredentials() {
-    return hasCredentials;
-  }
-
-  public void setHasCredentials(Boolean hasCredentials) {
-    this.hasCredentials = hasCredentials;
-  }
-
-  public String getUser() {
-    return user;
-  }
-
-  public void setUser(String user) {
-    this.user = user;
-  }
-
-  public String getPassword() {
-    return password;
-  }
-
-  public void setPassword(String password) {
-    this.password = password;
-  }
-
   @Override
   public String toString() {
     return "CommandLineConfig{" +
@@ -299,8 +272,6 @@ public class CommandLineConfig {
             ", commitAfter=" + commitAfter +
             ", blockSize=" + blockSize +
             ", dateTimeFormat='" + dateTimeFormat + '\'' +
-            ", user='" + user + '\'' +
-            ", password='**********'" +
             '}';
   }
 }
